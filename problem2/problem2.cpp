@@ -14,3 +14,26 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 #include <iostream>
 using namespace std;
+
+int main () {
+
+    int cur = 1;
+    int prev = 0;
+    int prev1 = 0;
+    int sum = 0;
+
+    while (cur < 4000000) {
+        
+        if (cur % 2 == 0) {
+            sum = sum + cur;
+        }
+
+        prev1 = prev;
+        prev = cur;
+
+        cur = prev + prev1;
+    }
+
+    cout << sum << endl;
+        
+}
