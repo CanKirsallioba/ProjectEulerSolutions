@@ -11,5 +11,18 @@ using namespace std;
 
 int main () {
     long long int num = 600851475143LL;
+    long long int cur = 0LL;
+    long long int cur_prime = 2LL;
+
+    while (cur < num) {
+        if (num % cur_prime == 0 && cur < cur_prime) {
+            cur = cur_prime;
+            num = num / cur_prime;
+        }
+        else {
+            cur_prime++;
+        }
+    }
     
+    cout << cur << endl;
 }
