@@ -39,11 +39,11 @@ int main () {
 }
 
 int divisorc(int n) {
-    int count = 0;
-    for (int i = 0; i < n; i++) {
-        if (n%i==0) {
-            count++;
-        }
-    }
-    return count;
+    int a = 1;
+	for (int b = 2; b <= n; b++) {
+		int c = 1;
+		for (; n % b == 0; n /= b, c++);
+		a *= c;
+	}
+	return a;
 }
